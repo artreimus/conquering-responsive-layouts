@@ -27,6 +27,10 @@ body {
   max-width: 100%;
 }
 
+.container {
+  max-width: 1128px;
+}
+
 .column {
   display: flex;
   flex-direction: column;
@@ -55,6 +59,8 @@ body {
   text-align: center;
   align-items: center;
   padding: 5rem;
+  min-height: 660px;
+  justify-content: center;
 }
 
 .container__one--intro {
@@ -74,6 +80,7 @@ body {
 .main__container--two {
   background-color: var(--color-secondary);
   padding: 5rem;
+  align-items: center;
 }
 
 .container__two--title {
@@ -82,7 +89,7 @@ body {
 }
 
 .container__two--text {
-  max-width: 600px;
+  max-width: 450px;
 }
 
 .container__two--text + .container__two--text {
@@ -119,7 +126,7 @@ body {
 
 .container__four--flex,
 .container__three--flex {
-  max-width: 600px;
+  max-width: 450px;
 }
 
 .container__three--flex {
