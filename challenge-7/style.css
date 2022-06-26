@@ -31,14 +31,15 @@ body {
   max-width: 1128px;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-}
-
 .row {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -46,6 +47,7 @@ body {
   font-weight: 700;
   font-family: var(--ff-primary);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 .text {
@@ -54,11 +56,15 @@ body {
   font-family: var(--ff-secondary);
 }
 
+.section {
+  min-height: 460px;
+  padding: 1rem 5rem;
+}
+
 .main__container--one {
   background-color: var(--color-primary);
   text-align: center;
   align-items: center;
-  padding: 5rem;
   min-height: 660px;
   justify-content: center;
 }
@@ -68,6 +74,7 @@ body {
   text-transform: uppercase;
   font-family: var(--ff-secondary);
   font-weight: 300;
+  letter-spacing: 3px;
 }
 
 .container__one--title {
@@ -75,12 +82,13 @@ body {
   font-family: var(--ff-primary);
   font-weight: 700;
   color: var(--color-quaternary);
+  line-height: 1.1;
 }
 
 .main__container--two {
   background-color: var(--color-secondary);
-  padding: 5rem;
   align-items: center;
+  justify-content: center;
 }
 
 .container__two--title {
@@ -92,13 +100,8 @@ body {
   max-width: 450px;
 }
 
-.container__two--text + .container__two--text {
-  margin-left: 1.5em;
-}
-
 .main__container--three {
   background-color: var(--color-tertiary);
-  padding: 5rem;
   justify-content: center;
 }
 
@@ -112,7 +115,6 @@ body {
 
 .main__container--four {
   background-color: var(--color-quaternary);
-  padding: 5rem;
   justify-content: center;
 }
 
@@ -135,4 +137,53 @@ body {
 
 .container__four--flex {
   margin-left: 3rem;
+}
+
+.container__two--text + .container__two--text {
+  margin-left: 1.5em;
+}
+
+@media (max-width: 900px) {
+  .container__four--flex,
+  .container__three--flex {
+    max-width: 350px;
+  }
+
+  .main__image {
+    border: 1px solid white;
+    /* max-width: 80%; */
+  }
+
+  .image__container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  .container__one--title {
+    font-size: 2.75rem;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .container__four--flex,
+  .container__three--flex {
+    margin: 0 0 1rem 0;
+  }
+
+  .section {
+    padding: 2rem 2rem;
+  }
 }
